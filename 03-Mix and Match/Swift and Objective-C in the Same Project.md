@@ -400,4 +400,4 @@ extension Color {
 
 - 对于应用程序的 target，当存在 Objective-C 桥接头文件时，标记`internal`修饰符的 Swift 声明也会出现在自动生成的头文件中。
 
-- 对于框架的 target，只有标记`public`或`open`修饰符的声明才会出现在自动生成的头文件中，不过依然可以在框架内部的 Objective-C 代码中使用标记`internal`修饰符的 Swift API，只要它们所属的类继承自 Objective-C 类。关于访问级别修饰符的更多信息，请参阅 [*The Swift Programming Language 中文版*](http://wiki.jikexueyuan.com/project/swift/) 中的[访问控制](http://wiki.jikexueyuan.com/project/swift/chapter2/24_Access_Control.html)章节。
+- 对于外部模块，在使用的模块只有标记`public`或`open`修饰符的声明才会出现在自动生成的头文件中给oc使用，不过使用的模块内部的使用标记`internal`修饰符的 Swift API，只要它们所属的类继承自 NSObject 类。关于访问级别修饰符的更多信息，请参阅 [*The Swift Programming Language 中文版*](http://wiki.jikexueyuan.com/project/swift/) 中的[访问控制](http://wiki.jikexueyuan.com/project/swift/chapter2/24_Access_Control.html)章节。
